@@ -51,7 +51,7 @@ def load_map(path, chunk_size, tile_size):
                 player_rect.center[X] - chunks_pos[X] >= -CHUNK_SIZE * tile_size - tile_size and \
                 player_rect.center[Y] - chunks_pos[Y] >= -CHUNK_SIZE * tile_size - tile_size:
 
-            chunks_in_range.append(chunks_pos)
+
             x = 0
             y = 0
             # iterating over rows and tile in the chunk
