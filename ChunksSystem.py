@@ -64,11 +64,11 @@ def load_map(path, chunk_size, tile_size):
 
                     if tile == "1":
                         # pygame.draw.rect(screen, (40, 40, 40), ((chunks_pos[X] + x) * tile_size, (chunks_pos[Y] + y) * tile_size, tile_size, tile_size))
-                        pygame.draw.rect(screen, (40, 40, 40), cam.apply((chunks_pos[X] + (x * tile_size), chunks_pos[Y] + (y * tile_size), tile_size, tile_size)))
+                        pygame.draw.rect(screen, (40, 40, 40), camera.apply((chunks_pos[X] + (x * tile_size), chunks_pos[Y] + (y * tile_size), tile_size, tile_size)))
 
                     if tile == "2":
                         # pygame.draw.rect(screen, (40, 40, 40), ((chunks_pos[X] + x) * tile_size, (chunks_pos[Y] + y) * tile_size, tile_size, tile_size))
-                        pygame.draw.rect(screen, (255, 40, 40), cam.apply((chunks_pos[X] + (x * tile_size), chunks_pos[Y] + (y * tile_size), tile_size, tile_size)))
+                        pygame.draw.rect(screen, (255, 40, 40), camera.apply((chunks_pos[X] + (x * tile_size), chunks_pos[Y] + (y * tile_size), tile_size, tile_size)))
 
                     if tile != "0":
                         tile_rects.append(pygame.Rect((chunks_pos[X] + (x * tile_size), chunks_pos[Y] + (y * tile_size), tile_size, tile_size)))
