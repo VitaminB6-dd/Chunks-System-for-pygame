@@ -46,10 +46,10 @@ def load_map(path, chunk_size, tile_size):
     for chunks_pos in game_map:
         # iterating ove all the chunks
         # if chunk is in the screen draw it
-        if abs(player_rect.center[X] - chunks_pos[X]) <= window_width + CHUNK_SIZE and \
-                abs(player_rect.center[Y] - chunks_pos[Y]) <= window_height and \
-                player_rect.center[X] - chunks_pos[X] >= -CHUNK_SIZE * tile_size - tile_size and \
-                player_rect.center[Y] - chunks_pos[Y] >= -CHUNK_SIZE * tile_size - tile_size:
+        if player.rect.center[X] - chunks_pos[X] < window_width or \
+                player.rect.center[Y] - chunks_pos[Y] < window_height or \
+                player.rect.center[X] - chunks_pos[X] >= -CHUNK_SIZE or \
+                player.rect.center[Y] - chunks_pos[Y] >= -CHUNK_SIZE:
 
 
             x = 0
